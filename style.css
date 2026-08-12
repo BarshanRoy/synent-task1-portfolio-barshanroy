@@ -1798,3 +1798,34 @@ a:focus-visible {
         bottom: 14px;
     }
 }
+
+/* =====================================
+   ACCESSIBILITY - REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+    .btn:hover,
+    .social-links a:hover,
+    .skill-card:hover,
+    .project-card:hover,
+    .project-link:hover,
+    .contact-card:hover,
+    .footer-social a:hover,
+    .back-to-top:hover {
+        transform: none;
+    }
+}
